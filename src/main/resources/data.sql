@@ -16,8 +16,8 @@ values
 (4, 'Zapatillas', 21000);
 
 
-insert into venta
-(id_venta, fecha_venta, cantidad_productos, precio_unidad, total_venta)
+insert into comprobante
+(id_comprobante, fecha_comprobante, cantidad_productos, precio_unidad, total_comprobante)
 values
 (1, '2022-05-19', 1, 5700, 5700),
 (2, '2021-09-19', 2, 5700, 11400),

@@ -1,6 +1,5 @@
 package com.entregados.cano.service.producto;
 
-import com.entregados.cano.model.Cliente;
 import com.entregados.cano.model.Producto;
 
 import java.util.List;

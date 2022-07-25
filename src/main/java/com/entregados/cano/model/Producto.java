@@ -1,30 +1,33 @@
 package com.entregados.cano.model;
 
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "PRODUCTO")
 public class Producto {
 
-    @Column(name = "ID_PRODUCTO")
     @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column(name = "ID_PRODUCTO")
     private Integer id_producto;
     @Column(name = "NOMBREPRODUCTO")
     private String nombreProducto;
     @Column(name = "PRECIO")
     private Integer precio;
 
-    public Producto() {
+    @Column(name = "STOCK")
+    private Integer stock;
+
+    public Producto(Integer stock) {
+        this.stock = stock;
     }
 
-    public Producto(Integer id_producto, String nombreProducto, Integer precio) {
+    public Producto(Integer id_producto, String nombreProducto, Integer precio, Integer stock) {
         this.id_producto = id_producto;
         this.nombreProducto = nombreProducto;
         this.precio = precio;
+        this.stock = stock;
     }
 
     public Integer getId_producto() {
@@ -49,5 +52,13 @@ public class Producto {
 
     public void setPrecio(Integer precio) {
         this.precio = precio;
+    }
+
+    public Integer getStock() {
+        return stock;
+    }
+
+    public void setStock(Integer stock) {
+        this.stock = stock;
     }
 }
